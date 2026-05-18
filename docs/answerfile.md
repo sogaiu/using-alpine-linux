@@ -1,0 +1,80 @@
+# Answerfile
+
+Alpine Linux's `setup-alpine` script can be handed an "answerfile"
+that allows certain setup options to be pre-specified:
+
+  https://wiki.alpinelinux.org/wiki/Using_an_answerfile_with_setup-alpine
+
+An example answerfile can be generated using `setup-alpine -c`.
+
+It might have been interesting if an answerfile could have been
+generated from an existing installation but there doesn't appear to be
+any out-of-the-box support for that kind of thing.
+
+Here is a sample for a system disk (whole disk) arrangement:
+
+```
+# Modified answer file for setup-alpine script
+# If you don't want to use a certain option, then comment it out
+
+# Use US layout with US variant
+KEYMAPOPTS="kr kr"
+
+# Set hostname to 'alpine'
+HOSTNAMEOPTS="-n alpine"
+
+# XXX: if setup-desktop is used after, that will likely call
+#      setup-xorg-base or setup-wayland-base, either of which will
+#      call setup-devd with udev
+# Set device manager to mdev
+DEVDOPTS=mdev
+
+# XXX: need to be asked for wireless auth info so commenting
+#      out, this should result in prompt_for_interfaces being
+#      executed within setup-interfaces (see bottom of that script)
+# Contents of /etc/network/interfaces
+#INTERFACESOPTS="auto lo
+#iface lo inet loopback
+#
+#auto eth0
+#iface eth0 inet dhcp
+#hostname alpine
+#"
+
+# XXX: appropriate values will be obtained via dhcp?
+# Search domain of example.com, Google public nameserver
+#DNSOPTS="-d example.com 8.8.8.8"
+
+# Set timezone to UTC
+TIMEZONEOPTS="-z Asia/Seoul"
+
+# set http/ftp proxy
+PROXYOPTS=none
+
+# Add first mirror (CDN)
+APKREPOSOPTS="-1"
+
+# Create admin user
+USEROPTS="-a -u -g audio,input,video,netdev user"
+
+# No sshd
+SSHDOPTS=none
+
+# No openntpd
+NTPOPTS=none
+
+# XXX: manually run setup-disk
+# Use /dev/vda as a sys disk if vm
+# Use /dev/sda as a sys disk
+# DISKOPTS="-m sys /dev/sda"
+#DISKOPTS="-m sys /dev/vda"
+DISKOPTS=none
+
+# Setup storage with label APKOVL for config storage
+#LBUOPTS="LABEL=APKOVL"
+LBUOPTS=none
+
+#APKCACHEOPTS="/media/LABEL=APKOVL/cache"
+APKCACHEOPTS=none
+```
+
