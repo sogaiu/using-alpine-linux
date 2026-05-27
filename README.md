@@ -53,6 +53,14 @@ Linux Mint was mostly good (and still may be), but:
 
 * Has more up-to-date packages than Linux Mint.
 
+* A typical installation has far less stuff that one did not ask for
+  than Linux Mint (or Ubuntu).  Since updating to cope with the
+  increasing number of discovered vulnerabilities is getting worse, it
+  probably is less work to keep an Alpine Linux system up-to-date.
+  Also, the less complicated system may be easier for the maintainers
+  to keep in better shape, but this may also depend on the available
+  resources.
+
 ## Requirements
 
 * Pretty good ability to be aware of security-related issues in a
