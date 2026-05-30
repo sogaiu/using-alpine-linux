@@ -17,10 +17,9 @@
 
   * Copy certain settings files into place, e.g.
 
-    * cp xfce4-keyboard-shortcuts.xml \
-         ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+    * `cp xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/`
 
-    * cp world ~/
+    * `cp world ~/`
 
 * Prepare some files, directories, and environment variables
 
@@ -44,12 +43,12 @@
 
 * Ensure no network services started
 
-  * doas netstat -tunlp
+  * `doas netstat -tunlp`
 
 * Enable nftables (installation via `/etc/apk/world` above)
 
-  * doas rc-service start
-  * doas rc-update add nftables boot
+  * `doas rc-service start`
+  * `doas rc-update add nftables boot`
 
 * Log out once to get things like sound working
 
