@@ -46,6 +46,11 @@
 
   * doas netstat -tunlp
 
+* Enable nftables (installation via `/etc/apk/world` above)
+
+  * doas rc-service start
+  * doas rc-update add nftables boot
+
 * Log out once to get things like sound working
 
 ## Adjust User Things

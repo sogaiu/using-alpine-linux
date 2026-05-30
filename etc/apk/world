@@ -37,6 +37,7 @@ man-pages-posix
 mandoc
 mesa-dri-gallium
 musl-dev
+nftables
 openssl
 pavucontrol
 pipewire

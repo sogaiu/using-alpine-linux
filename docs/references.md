@@ -15,6 +15,7 @@
       working](https://wiki.alpinelinux.org/wiki/How_to_get_regular_stuff_working)
     * [Alpine Package
       Keeper](https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper)
+    * [Nftables](https://wiki.alpinelinux.org/wiki/Nftables)
     * [Upgrading
       Alpine](https://wiki.alpinelinux.org/wiki/Upgrading_Alpine)
   * [FAQ](https://wiki.alpinelinux.org/wiki/Alpine_Linux:FAQ)

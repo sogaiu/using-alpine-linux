@@ -84,9 +84,7 @@ Linux Mint was mostly good (and still may be), but:
 This lives on the top page to increase the chances things get attended
 to :)
 
-* Firewall setup (at least prevent listening by default) - nftables?
 
-* spell out a sample world file?  confirm with actual system
 
 ## Some Details
 
