@@ -48,6 +48,27 @@ well as attack surface area).
 
     * setup-alpine -f answerfile
 
+  * If the wireless interface isn't detected (e.g. no option to choose
+    `wlan0` or similar), check `dmesg` output to see if the hardware
+    was appropriately detected and initialized.  It may be that
+    additional firmware might need to be loaded.
+
+    [This work
+    item](https://gitlab.alpinelinux.org/alpine/alpine-conf/-/work_items/10646)
+    has a work-around for the case of some Intel hardware:
+
+    ```
+    mkdir /root/upper /root/workdir
+    mount -t overlay overlay -o lowerdir=/.modloop/,upperdir=/root/upper,workdir=/root/workdir /.modloop
+    apk add linux-firmware-intel
+    rmmod iwlwifi
+    modprobe iwlwifi
+    ```
+
+    If your hardware is non-Intel, it might be worth trying a
+    different `linux-firmware-*` package and adjusting the `rmmod` /
+    `modprobe` bits.
+
   * Setup the disk (choose the appropriate storage device and "sys"):
 
     * setup-disk
