@@ -23,11 +23,11 @@ well as attack surface area).
 * Prepare installation media:
 
   * Choose a release, see:
-  
+
     https://alpinelinux.org/releases/
-  
+
   * Download iso and checksum from:
-  
+
     https://alpinelinux.org/downloads/
 
   * Verify using `sha256sum` or other appropriate tool
@@ -72,7 +72,7 @@ well as attack surface area).
   * Setup the disk (choose the appropriate storage device and "sys"):
 
     * setup-disk
-  
+
   * Shutdown and remove media (may need manual poweroff)
 
     * halt
@@ -88,7 +88,7 @@ well as attack surface area).
     * echo "permit persist :wheel" > /etc/doas.d/doas.conf
 
   * Verify non-root user is in wheel group
-  
+
     * less /etc/group
 
 * Ensure user has a password
