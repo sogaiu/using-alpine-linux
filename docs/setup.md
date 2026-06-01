@@ -32,7 +32,7 @@ well as attack surface area).
 
   * Verify using `sha256sum` or other appropriate tool
 
-  * Place `.iso` on boot media (e.g. use Ventoy on USB drive)
+  * Place `.iso` on boot media (e.g. use Ventoy [1] on USB drive)
 
 * Perform basic installation steps:
 
@@ -44,7 +44,7 @@ well as attack surface area).
     somehow, e.g via USB (hints: `fdisk -l`, `mount`, etc.)
 
   * Run and interact with setup script (e.g. wifi info, root password,
-    etc.) [1]:
+    etc.) [2]:
 
     * setup-alpine -f answerfile
 
@@ -107,7 +107,10 @@ well as attack surface area).
 
 ## Footnotes
 
-[1] If `wlan0` does not show up as a candidate for wireless
+[1] Ventoy's status might be considered a bit murky so just `dd`-ing
+the iso image to USB memory might be a better option.
+
+[2] If `wlan0` does not show up as a candidate for wireless
 connectivity, two work-arounds are: 1. use a wifi USB dongle, or
 2. use a wired connection.  After the first reboot, wifi hardware may
 be detected appropriately.  If a wired connection was used to
