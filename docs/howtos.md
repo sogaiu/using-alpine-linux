@@ -4,7 +4,7 @@
   kernel command line (the line that starts "linux") at startup
   (e.g. get at grub menu via shift for bios or esc for uefi then 'e'
   to edit boot entry info):
-  
+
     single
 
 * packages can be searched for at:
@@ -17,33 +17,50 @@
 
 * see log of apk transactions:
 
-  * cat /var/log/apk.log
+  * `cat /var/log/apk.log`
 
 * list files for an installed package:
 
-  * apk info -L &lt;name&gt;
+  * `apk info -L <name>`
 
 * find installed package owning a file path:
 
-  * apk info -W &lt;path&gt;
+  * `apk info -W <path>`
 
 * search for package by substring of name or description:
 
-  * apk search &lt;name&gt;
-  * apk search -d &lt;description&gt;
+  * `apk search <name>`
+  * `apk search -d <description>`
 
 * show installed packages:
 
-  * apk info
-  * apk query --install '*'
+  * `apk info`
+  * `apk query --install '*'`
 
 * view which services are enabled for particular runlevels:
 
-  * rc-update show -v
+  * `rc-update show -v`
 
-* for upgrading to a new release(?):
+* persist certain system settings across reboots:
+
+  * create / put an executable script in `/etc/local.d/` with a
+    name that ends with `.start`.  make the content such that
+    it causes something to be set, e.g.
+
+      ```
+      #! /bin/sh
+
+      echo 80 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+      ```
+
+  * enable the local service:
+
+    * `rc-update add local`
+
+* upgrade to a new release:
 
     > When alpine has a new release, the repository path will
     > change. Assuming you are going forward in time (e.g from 3.12 to
     > 3.13), you can simply edit /etc/apk/repositories and run apk
     > upgrade --available.
+
