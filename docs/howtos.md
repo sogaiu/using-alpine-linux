@@ -57,10 +57,3 @@
 
     * `rc-update add local`
 
-* upgrade to a new release:
-
-    > When alpine has a new release, the repository path will
-    > change. Assuming you are going forward in time (e.g from 3.12 to
-    > 3.13), you can simply edit /etc/apk/repositories and run apk
-    > upgrade --available.
-
