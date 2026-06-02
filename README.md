@@ -73,11 +73,11 @@ Linux Mint was mostly good (and still may be), but:
 
 * Relatively straight-forward and short setup process.
 
-* Has recent enough versions of gnucash (with ability to interface via
-  python [1]) and libreoffice.
-
 * Convenient enough use of removable media via USB because this is a
   frequent need.
+
+* Has recent enough versions of gnucash (with ability to interface via
+  python [1]) and libreoffice.
 
 ## Unaddressed Items
 
