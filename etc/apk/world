@@ -36,6 +36,7 @@ man-pages
 man-pages-posix
 mandoc
 mesa-dri-gallium
+mousepad
 musl-dev
 nftables
 openssl
