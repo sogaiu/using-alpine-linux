@@ -1,5 +1,17 @@
 # Non-Packaged Libraries and Programs
 
+There is a package for `stow`, so in a number of cases, this can be
+used to build from source and manage the results accordingly.
+
+So far, have had luck with:
+
+* emacs-31.x
+* zig-0.16.0
+
+Might try to use with:
+
+* janet
+
 ## tree-sitter-module
 
 For tree-sitter parser shared objects / libraries.
