@@ -102,6 +102,7 @@ Currently, there are the following sections:
 
 ### Maintenance and Reference
 
+* [Upgrading](docs/upgrading.md)
 * [Howtos](docs/howtos.md)
 * [Shell Stuff](docs/shell-stuff.md)
 * [References](docs/references.md)
