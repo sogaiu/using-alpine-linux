@@ -28,7 +28,8 @@
   * [Online manpages at manned.org](https://manned.org/pkg/alpine-3.23)
 
 * Community
-  * IRC
+  * [IRC](https://wiki.alpinelinux.org/wiki/Alpine_Linux:IRC)
+    * [logs](https://irclogs.alpinelinux.org/)
     * [#alpine-linux](irc://irc.oftc.net/alpine-linux) - bridged to
       matrix: #_oftc_#alpine-linux:matrix.org
     * [#alpine-devel](irc://irc.oftc.net/alpine-devel) - bridged to
