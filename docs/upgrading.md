@@ -45,6 +45,12 @@
    `/var/log/apk.log` making notes about changes, e.g.  it's likely
    there will be some new files under `/etc` ending in `.apk-new`.
 
+   Note that in some cases, one of the `setup-*` scripts that ran
+   during installation may have originally created a file in `/etc`,
+   e.g. `/etc/mkinitfs/mkinitfs.conf`, and may be more appropriate
+   than one that gets installed via a package update so not modifying
+   what's already there might be a better choice...YMMV.
+
 6. Attend to what was noted in the last step.
 
 7. Attend to anything mentioned in the "Upgrade Notes" section
