@@ -110,6 +110,7 @@ Currently, there are the following sections:
 
 ### Misc
 
+* [Troubles](docs/troubles.md)
 * [Wish List](docs/wish-list.md)
 * [Gripes](docs/gripes.md)
 
